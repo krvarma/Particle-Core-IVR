@@ -15,6 +15,8 @@ This project is an IVR System. Following hardware components are using for this 
 
 Here is the overview of the different hardware components and how they interact.
 
+![enter image description here](https://raw.githubusercontent.com/krvarma/Particle-Core-IVR/master/images/IVR%20Overview.png)
+
 This project is almost similar to my previous Voice Messaging project except it has an additional DTMF Breakout Board. This is used to decode the DTMF signals. This board is used to detect which number user has pressed on other end. The Audio Out of the GSM Breakout Board is connected to the Audio Input of the DTMF Decoder and the pins DR, D0, D1, D2 and D3 are connected to Particle Core pins D2, D3, D4, D5 and D6 respectively. The Data Ready (DR) pin of the DTMF Board will be high when the boards detects the DTMF tone and it is decoded correctly.  When this pin is high, we read the data pins D0...D3, this will be give us the number pressed on the other end of the telephone line.
 
 In this sample the GSM Board is configured to answer the incoming call after 2 rings, so when a call is received it will be automatically answer after 2 rings. When the call is answered, application will speak out a welcome message and prompts the user to enter a 4 digit PIN. The default PIN is `9999`, but you can change it whatever you like. When the correct PIN is entered, the application will ask you to enter 7, 8 or 9. Pressing 7 will speak out the current temperature, pressing 8 will speak out current humidity and pressing 9 will hang up the call. The sample use DHT Sensor to read temperature and humidity. This sensor is connected to the pin D0 of Particle Core.
@@ -60,4 +62,8 @@ In this sample the GSM Board is configured to answer the incoming call after 2 r
 
 **Screenshots**
 
+![enter image description here](https://raw.githubusercontent.com/krvarma/Particle-Core-IVR/master/images/wiring.jpg)
+
 **Demo Video**
+
+https://www.youtube.com/watch?v=sPZ4FBCrNjo
